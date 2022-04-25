@@ -1,7 +1,3 @@
-FROM alpine:latest
+FROM thesadboy/x-ui
 
-RUN apk add --no-cache --virtual .build-deps ca-certificates curl unzip
-
-ADD configure.sh /configure.sh
-RUN chmod +x /configure.sh
-CMD /configure.sh
+RUN docker run --network=host --restart=always --name x-ui -d -p 54321:54321 -p 8000-8010:8000-8010/tcp -p 8000-8010:8000-8010/udp --tmpfs /tmp --tmpfs /run --tmpfs /run/lock thesadboy/x-ui
