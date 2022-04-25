@@ -1,0 +1,10 @@
+{
+  "name": "heroku-x-ui",
+  "description": "Deploy x-ui on Heroku.",
+  "keywords": [
+    "x-ui"
+  ],
+  "website": "https://github.com/langoca",
+  "repository": "https://github.com/langoca/xui-heroku",
+  "stack": "container"
+}
